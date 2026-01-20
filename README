@@ -1,13 +1,44 @@
-This is a three part project about System Identification 
+# System Identification and Adaptive Control Suite
 
-Part 1
+This repository contains a three-part project focused on the modeling, estimation, and robust control of dynamic systems. The work progresses from offline statistical analysis to real-time adaptive architectures designed to handle uncertainty and disturbances.
 
-Offline parameter estimation 
+---
 
-Part 2 
+## 🚀 Project Overview
 
-Online Parameter Estimation 
+The objective of this project is to bridge the gap between theoretical system modeling and practical control implementation. It is divided into three core modules:
 
-Part 3 
+1.  **Offline Estimation:** Statistical parameter identification.
+2.  **Online Estimation:** Real-time tracking using Lyapunov-based topologies.
+3.  **Robust Adaptive Control:** Advanced MRAC with leakage modifications.
 
-Robust Adaptive Control
+---
+
+## 📂 Project Modules
+
+### Part 1: Offline Parameter Estimation
+Focused on identifying the constant parameters of a system using batch input-output data.
+* **Methodology:** Least Squares (LS) Estimation.
+* **Key Learning:** Implementation of the Normal Equations to minimize the sum of squared residuals and verifying the "Persistence of Excitation" condition.
+
+### Part 2: Online Parameter Estimation
+Transitioned to recursive estimation for real-time applications where parameters may be time-varying.
+* **Algorithms:** Gradient Descent-based estimation laws.
+* **Topologies:** * **Parallel:** The model runs independently of the plant.
+    * **Series-Parallel:** Uses plant state feedback within the estimation model to improve convergence speed and stability.
+* **Stability Analysis:** Design of estimation laws based on Lyapunov stability theory to ensure that the tracking error $e(t) \to 0$ as $t \to \infty$.
+
+### Part 3: Robust Adaptive Control
+Development of a Model Reference Adaptive Control (MRAC) system engineered to remain stable in the presence of bounded disturbances and unmodeled dynamics.
+* **Controller Design:** Adaptive laws for plant tracking.
+* **Robustness Modifications:**
+    * **$\sigma$-modification:** Introduced a leakage term to the adaptive law to prevent "parameter drift" during periods of low excitation.
+    * **$\epsilon$-modification:** An adaptive leakage variation where the damping term is scaled by the magnitude of the tracking error.
+
+---
+
+## 🛠 Tech Stack
+* **Simulation Environment:** MATLAB
+* **Key Concepts:** Lyapunov Stability, Gradient Search, Parameter Convergence, Robustness Analysis
+
+---
