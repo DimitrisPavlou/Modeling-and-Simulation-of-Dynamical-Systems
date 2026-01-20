@@ -40,5 +40,5 @@ Development of a Model Reference Adaptive Control (MRAC) system engineered to re
 ## 🛠 Tech Stack
 * **Simulation Environment:** MATLAB 
 * **Key Concepts:** Lyapunov Stability, Gradient Search, Parameter Convergence, Robustness Analysis
-
+* Can be converted to Python Tech Stack
 ---
