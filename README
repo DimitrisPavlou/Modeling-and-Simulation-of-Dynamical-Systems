@@ -8,9 +8,9 @@ This repository contains a three-part project focused on the modeling, estimatio
 
 The objective of this project is to bridge the gap between theoretical system modeling and practical control implementation. It is divided into three core modules:
 
-1.  **Offline Estimation:** Statistical parameter identification.
-2.  **Online Estimation:** Real-time tracking using Lyapunov-based topologies.
-3.  **Robust Adaptive Control:** Advanced MRAC with leakage modifications.
+1. **Offline Estimation:** Statistical parameter identification.
+2. **Online Estimation:** Real-time tracking using Lyapunov-based topologies.
+3. **Robust Adaptive Control:** Advanced MRAC with leakage modifications.
 
 ---
 
@@ -28,6 +28,7 @@ Transitioned to recursive estimation for real-time applications where parameters
     * **Series-Parallel:** Uses plant state feedback within the estimation model to improve convergence speed and stability.
 * **Stability Analysis:** Design of estimation laws based on Lyapunov stability theory to ensure that the tracking error $e(t) \to 0$ as $t \to \infty$.
 
+
 ### Part 3: Robust Adaptive Control
 Development of a Model Reference Adaptive Control (MRAC) system engineered to remain stable in the presence of bounded disturbances and unmodeled dynamics.
 * **Controller Design:** Adaptive laws for plant tracking.
@@ -38,7 +39,7 @@ Development of a Model Reference Adaptive Control (MRAC) system engineered to re
 ---
 
 ## 🛠 Tech Stack
-* **Simulation Environment:** MATLAB
+* **Simulation Environment:** MATLAB 
 * **Key Concepts:** Lyapunov Stability, Gradient Search, Parameter Convergence, Robustness Analysis
 
 ---
