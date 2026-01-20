@@ -8,9 +8,9 @@ This repository contains a three-part project focused on the modeling, estimatio
 
 The objective of this project is to bridge the gap between theoretical system modeling and practical control implementation. It is divided into three core modules:
 
-1. **Offline Estimation:** Statistical parameter identification  
-2. **Online Estimation:** Real-time tracking using Lyapunov-based topologies  
-3. **Robust Adaptive Control:** Advanced MRAC with leakage modifications  
+1. **Offline Estimation** – Statistical parameter identification  
+2. **Online Estimation** – Real-time tracking using Lyapunov-based topologies  
+3. **Robust Adaptive Control** – Advanced MRAC with leakage modifications  
 
 ---
 
@@ -20,7 +20,9 @@ The objective of this project is to bridge the gap between theoretical system mo
 
 Focused on identifying the constant parameters of a system using batch input–output data.
 
-- **Methodology:** Least Squares (LS) Estimation  
+- **Methodology:**  
+  Least Squares (LS) Estimation
+
 - **Key Learning:**  
   - Implementation of the Normal Equations to minimize the sum of squared residuals  
   - Verification of the *Persistence of Excitation* condition  
@@ -31,17 +33,19 @@ Focused on identifying the constant parameters of a system using batch input–o
 
 Transition to recursive estimation for real-time applications where parameters may be time-varying.
 
-- **Algorithms:** Gradient Descent–based estimation laws  
-- **Topologies:**
+- **Algorithms:**  
+  Gradient Descent–based estimation laws  
+
+- **Topologies:**  
   - **Parallel:**  
-    The model runs independently of the plant.
+    The model runs independently of the plant.  
+
   - **Series–Parallel:**  
-    Uses plant state feedback within the estimation model to improve convergence speed and stability.
+    Uses plant state feedback within the estimation model to improve convergence speed and stability.  
+
 - **Stability Analysis:**  
-  Design of estimation laws based on Lyapunov stability theory to ensure that the tracking error  
-  \[
-  e(t) \to 0 \quad \text{as} \quad t \to \infty
-  \]
+  Estimation laws are designed using Lyapunov stability theory to ensure asymptotic convergence of the tracking error  
+  (`e(t) → 0 as t → ∞`).
 
 ---
 
@@ -49,10 +53,13 @@ Transition to recursive estimation for real-time applications where parameters m
 
 Development of a Model Reference Adaptive Control (MRAC) system engineered to remain stable in the presence of bounded disturbances and unmodeled dynamics.
 
-- **Controller Design:** Adaptive laws for plant tracking  
-- **Robustness Modifications:**
+- **Controller Design:**  
+  Adaptive laws for plant tracking  
+
+- **Robustness Modifications:**  
   - **σ-modification:**  
-    Introduces a leakage term to the adaptive law to prevent *parameter drift* during periods of low excitation.
+    Introduces a leakage term to the adaptive law to prevent parameter drift during periods of low excitation.  
+
   - **ε-modification:**  
     An adaptive leakage variation where the damping term is scaled by the magnitude of the tracking error.
 
